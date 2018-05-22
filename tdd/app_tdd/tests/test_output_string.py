@@ -1,9 +1,9 @@
 from django.test import TestCase
-from .models import Semver
+from app_tdd.models import Semver
 
 # Create your tests here.
 
-class OutputString(TestCase):
+class OutputStringTest(TestCase):
 
     def test_config_string(self):
         sember = Semver()

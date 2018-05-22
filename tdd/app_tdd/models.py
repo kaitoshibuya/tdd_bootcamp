@@ -1,12 +1,14 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 
 # Create your models here.
 
 class Semver(models.Model):
-
-    def __init__(self):
-        pass
+    major = models.IntegerField(
+        validators=[
+            MinValueValidator(0)
+        ]
+    )
 
     def version(self):
         return ""
-
