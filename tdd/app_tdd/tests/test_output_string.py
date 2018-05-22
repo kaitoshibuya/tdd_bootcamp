@@ -8,4 +8,4 @@ class OutputStringTest(TestCase):
     def test_config_string(self):
         sember = Semver()
         version = sember.version()
-        self.assertEqual("", version)
+        self.assertEqual("0.0.0", version)

@@ -24,4 +24,5 @@ class Semver(models.Model):
     )
 
     def version(self):
+
         return ""
