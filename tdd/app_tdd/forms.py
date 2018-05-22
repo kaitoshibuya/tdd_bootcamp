@@ -9,6 +9,11 @@ class SemverForm(forms.Form):
             MinValueValidator(0)
         ]
     )
+    minor = forms.IntegerField(
+        validators=[
+            MinValueValidator(0)
+        ]
+    )
 
     class Meta:
         model = Semver
