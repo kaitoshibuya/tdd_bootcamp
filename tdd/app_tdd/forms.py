@@ -3,17 +3,11 @@ from django.forms import ModelForm
 from django import forms
 from django.core.validators import MinValueValidator
 
-class SemverForm(forms.Form):
-    major = forms.IntegerField(
-        validators=[
-            MinValueValidator(0)
-        ]
-    )
-    minor = forms.IntegerField(
-        validators=[
-            MinValueValidator(0)
-        ]
-    )
+class SemverForm(ModelForm):
+    major = forms.IntegerField()
+    minor = forms.IntegerField()
+    patch = forms.IntegerField()
 
     class Meta:
         model = Semver
+        fields = ["major","minor","patch"]

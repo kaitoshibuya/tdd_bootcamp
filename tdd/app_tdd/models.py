@@ -16,7 +16,12 @@ class Semver(models.Model):
             MinValueValidator(0)
         ]
     )
-
+    patch = models.IntegerField(
+        default=0,
+        validators=[
+            MinValueValidator(0)
+        ]
+    )
 
     def version(self):
         return ""
